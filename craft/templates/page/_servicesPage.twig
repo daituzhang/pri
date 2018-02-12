@@ -1,0 +1,45 @@
+<div class="servicesPage__service-row">
+  {% set services = ['One','Two','Three'] %}
+  {% for service in services %}
+  {% set backgroundImage = entry['service' ~ service ~ 'Image']|length == 0 ? "" : " background: url(" ~  entry['service' ~ service ~ 'Image']|first.url ~ ") no-repeat #000; background-size: cover;" %}
+    <div class="servicesPage__service" id="service-{{service}}">
+      <div class="row no-gap">
+        <div class="servicesPage__service-container row no-gap" style="{{backgroundImage}}">
+          <a class="col-xs-4 servicesPage__left trigger" data-type="toggle" data-id="service-{{service}}">
+            <h2 style="color: {{entry['service' ~ service ~ 'HeadingColor']}}">{{ entry['service' ~ service ~ 'Heading'] }}</h2>
+          </a>
+          <div class="col-xs-8 servicesPage__right">
+            <div class="servicesPage__description" style="color: {{entry['service' ~ service ~ 'HeadingColor']}}">
+              {{ entry['service' ~ service ~ 'Description'] }}
+            </div>      
+          </div>
+        </div>
+        <div class="col-xs-offset-4 col-xs-8">
+          <div class="servicesPage__detail-container">
+            {% for block in entry['service' ~ service ~ 'Details'].blocks %}
+              <div class="servicesPage__detail{{loop.first? ' active':''}}" id="service{{service}}Details-{{loop.index}}">
+                <h3>{{ block.heading }}</h3>
+                <img src="{{ block.image | first.url }}" alt="{{ block.image | first }}">
+                <div class="servicesPage__detail-body">
+                  {{ block.body }} 
+                </div>
+              </div>         
+            {% endfor %}
+            <nav>
+              PAGES
+                <pagination>
+                  <ul>
+                  {% for block in entry['service' ~ service ~ 'Details'].blocks %}
+                    <li class="servicesPage__detail-trigger trigger" data-type="default" data-trigger="servicesPage__detail" data-id="service{{service}}Details-{{loop.index}}"><a href="#">{{loop.index}}</a></li>
+                  {% endfor %}
+                  </ul> 
+                </pagination>
+            </nav>
+          </div>
+        </div>    
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<div class="triangle desktop-tablet-only triangle-bottom-left"></div>
+<div class="triangle desktop-tablet-only triangle-top-right"></div>

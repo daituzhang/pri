@@ -1,0 +1,22 @@
+<div class="row no-gap slides-row">
+  <div class="col-xs-4">
+    <div class="slides-square slides-container slides-left-up">
+      {% for block in entry.slidesLeftUp.blocks %}
+        {% include "blocks/_" ~ block.type %}
+      {% endfor %}
+    </div>
+    <div class="slides-square slides-container slides-left-bottom">
+      {% for block in entry.slidesLeftBottom.blocks %}
+        {% include "blocks/_" ~ block.type %}
+      {% endfor %}
+    </div>
+    <div class="triangle parallax desktop-tablet-only" data-mode="triangle"></div>
+  </div>
+  <div class="col-xs-8">
+    <div class="slides-container slides-right box-shadow">
+      {% for block in entry.slidesRight.blocks %}
+        {% include "blocks/_" ~ block.type %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

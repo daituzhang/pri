@@ -1,0 +1,39 @@
+footer {
+  font-size: 14px;
+  text-transform: uppercase;
+  max-width: 430px;
+  [class^="col-"] {
+    align-self: flex-end;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: $gray;
+    a {
+      transition: all .5s ease;
+      text-decoration: none;      
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+
+  input {
+    margin-bottom: 0;
+  }
+
+  @include desktop-tablet {
+    position: absolute;
+    right: 70px;
+    bottom: 70px;
+  }
+  @include mobile-only {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

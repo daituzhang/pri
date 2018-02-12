@@ -1,0 +1,128 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+{% set pages = craft.entries.section('pages') %}
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="description" value="{% block metaDescription %}{{ seo.metaDescription }}{% endblock %}">
+
+  <meta name="google-site-verification" content="1Djs-1-zWByyLacEHYfM7DIZzBUBP8nK6zSQvDz5Bik" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ seo.metaTitle }}</title>
+
+	<link rel="home" href="{{ siteUrl }}" />
+  <link rel="shortcut icon" href="../favicon.ico">
+  {% cache for 3 weeks %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+   <link rel="stylesheet" type="text/css" href="{{ craft.config.environmentVariables['frontEndAssets'] }}css/vendor/menu/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="{{ craft.config.environmentVariables['frontEndAssets'] }}css/vendor/menu/icons.css" />
+  <link rel="stylesheet" type="text/css" href="{{ craft.config.environmentVariables['frontEndAssets'] }}css/vendor/menu/component.css" />
+  <link rel="stylesheet" type="text/css" href="{{ craft.config.environmentVariables['frontEndAssets'] }}css/vendor/hamburgers/hamburgers.css" />
+  <script src="{{ craft.config.environmentVariables['frontEndAssets'] }}/js/vendor/modernizr.custom.js"></script>
+	<link rel="stylesheet" href="{{ craft.config.environmentVariables['frontEndAssets'] }}css/site.css">
+  {% endcache %}
+	<!--[if lt IE 9]>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+{% cache for 3 weeks %}
+  <div class="mp-container">
+    <div class="mp-pusher" id="mp-pusher">
+      <nav id="mp-menu" class="mp-menu">
+        <div class="logo desktop-tablet">
+          <a href="/"><img src="{{siteInfo.logo|first.url}}" alt="Body By Robbie"></a>
+        </div>
+        <div class="mp-level">
+          <ul>
+            <li><a href="/about-me">About Me</a></li>
+            <li><a href="/press">Press</a></li>
+            <li><a href="/services">Services</a>
+              <div class="mp-level">
+                <ul>
+                  <li><a href="">Interiors</a></li>
+                  <li><a href="">Consulting</a></li>
+                  <li><a href="">Appearences</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="#testimonials">Blogs</a></li>
+            <li><a href="#contact">Crelove</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="li-icon"><a class="icon-search"></a></li>
+            <li class="li-icon"><a class="icon-shoppingbag"></a></li>
+          </ul>
+        </div>
+      </nav>
+{% endcache %}
+      <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+        <div class="scroller-inner">
+          <div class="mobile-nav mobile-only">
+            <a href="/" class="logo-link-left"><img src="{{siteInfo.logo|first.url}}" alt="siteInfo.logo"></a>
+            <a href="#" id="trigger" class="hamburger hamburger--collapse menu-trigger">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </a>
+          </div>
+        	{% block content %}
+          {% endblock %}
+        	{% block footer %}
+          {% cache for 3 weeks %}
+          <footer>
+            <div class="row">
+              <div class="col-xs-8">
+                <form action="">
+                  <label>Sign up for news + updates</label>
+                  <input type="text" placeholder="Enter Your Email" id="subscribe">
+                </form>
+              </div>
+              <div class="col-xs-4">
+                <ul>
+                  <li class="social"><a class="icon-instagram" target="_blank" href="{{ siteInfo.instagram }}"></a></li>
+                  <li class="social"><a class="icon-facebook" target="_blank" href="{{ siteInfo.facebook }}"></a></li>
+                  <li class="social"><a class="icon-pinterest" target="_blank" href="{{ siteInfo.pinterest }}"></a></li>
+                  <li class="social"><a class="icon-twitter" target="_blank" href="{{ siteInfo.twitter }}"></a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endcache %}
+  {% endblock %}
+{# 	{% block scripts_start %}{% endblock %}
+ #}    <!--  libraries downloaded from cdn -->
+{#   {% cache for 3 weeks %}
+ #}    <!-- Google Tag Manager -->
+
+    <!--  end: libraries downloaded from cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="{{ craft.config.environmentVariables['frontEndAssets'] }}js/vendor/classie.js"></script>
+    <script src="{{ craft.config.environmentVariables['frontEndAssets'] }}js/vendor/jquery.mobile.custom.min.js"></script>
+    <script src="{{ craft.config.environmentVariables['frontEndAssets'] }}js/vendor/mlpushmenu.js"></script>
+    <script>
+      new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+    </script>
+  <script src="{{ craft.config.environmentVariables['frontEndAssets'] }}js/main.js"></script>
+{#   {% endcache %}
+ #}</body>
+</html>

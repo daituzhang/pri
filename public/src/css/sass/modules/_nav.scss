@@ -1,0 +1,142 @@
+nav#mp-menu {
+  z-index: 11;
+  color: $gray;
+  background-color: $white;
+  a {
+    text-decoration: none;
+  }
+  [class^="icon-"] {
+    color: $black;
+  }
+  @include desktop-tablet {
+    display: flex;
+    border-left: 35px solid $pink;
+    border-right: 35px solid $pink;
+    padding: 20px 70px;
+    transform: none;
+    position: fixed;
+    height: 90px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    h2 {
+      display: none;
+    }
+    .mp-level {
+      width: 80%;
+      transform: none !important;
+      position: relative;
+      background: none;
+      text-align: right;
+      &[data-level="2"]{
+        width: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    a:not(.logo-link) {
+      padding: 10px 10px;
+    }
+    .logo {
+    }
+    li.li-icon {
+      width: 35px;
+    }
+    li , a:not(.logo-link) {
+      box-shadow: none;
+      text-shadow: none;
+      font-size: 1.6rem;
+      &:not([class^="icon-"]):before {
+        content: none;
+      }
+    }
+    li{
+      width: auto;
+      text-shadow: none;
+      position: relative;
+      vertical-align: top;
+      > .mp-level {
+        max-height: 0;
+        height: auto;
+        overflow-y: hidden;
+        position: absolute;
+        top: 90%;
+        left: 20px;
+        width: auto;
+        transition: all .3s ease;
+        ul {
+          display: block;
+          text-align:left;
+        }
+        li {
+          display: block;
+          background: $gray;
+          color: $white;
+          margin-bottom: 5px;
+          a {
+            font-size: 1.4rem;
+            padding: 5px 25px;
+          }
+        }
+      }
+      &:hover > .mp-level {
+        max-height: 1000px;
+      }
+    }
+    li.social {
+      color: $white;
+      a {
+        padding: 22px 8px;
+      }
+    }
+    li.hide {
+      display: none;
+    }
+  }
+  @include mobile-only {
+    ul {
+      position: static;
+    }
+  }
+  .mp-level {
+    background-color: $white;
+  }
+}
+
+
+.menu-trigger#trigger {
+  background: transparent;
+  &:before {
+    background: tranparent;
+  }
+}
+.mobile-nav {
+    height: 58px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.logo-link-left {
+  position: absolute;  
+  display: block;
+  width: 150px;
+  @include center-x;
+}
+@include desktop-only {
+  .logo {
+    width: 20%;
+    img {
+      max-width: 153px;
+    }
+  }
+  .mp-pusher {
+    transform: none !important;
+  }
+  #trigger {
+    display: none;
+  } 
+}

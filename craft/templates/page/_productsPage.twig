@@ -1,0 +1,26 @@
+{% set backgroundImage = entry.image|length == 0 ? "" : " background: url(" ~  entry.image|first.url ~ ") no-repeat #000; background-size: cover;" %}
+<div class="productsPage__hero" style="{{backgroundImage}}">
+</div>
+<div class="row productsPage__row">
+  {% for product in craft.shopify.getProducts({ fields: 'title,images,vendor, variants, body_html', limit: 8 }) %}  
+    <div class="col-xs-3 product">
+      {% set backgroundImage = product.images == 0 ? "" : " background: url(" ~  product.images|first.src ~ ") no-repeat #eaeaec; background-size: cover;" %}
+      <div class="product__image" style="{{backgroundImage}}">
+      </div>
+      <div class="product__detail">
+        <div class="row">
+          <div class="col-xs-6">
+            <img src="{{ product.images|first.src }}" alt="{{ product.title }}">
+          </div>
+          <div class="col-xs-6">
+            <h2>{{ product.title }}</h2>
+            <h3>$ {{ product.variants | first.price }}</h3>
+            {% set description = product.body_html | split('<br>', 2) %}
+            {{ description[0] | striptags }}
+            <a href="" class="btn">View Product</a>
+          </div>
+        </div>
+      </div>
+   </div>
+  {% endfor %}
+</div>

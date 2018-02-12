@@ -1,0 +1,12 @@
+{% for child in parent %}
+	<div class="dropdown">
+		<h4 class="triangle">{{ child.title }}</h4>
+  	<div class="dropdown-inner">
+  		<div class="dropdown-body">
+  		{{ child.body }}
+  		</div>
+  	</div>
+	</div>
+{% endfor %}  
+
+

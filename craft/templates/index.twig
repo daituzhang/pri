@@ -1,0 +1,104 @@
+{% extends "_layout" %}
+
+
+{% block content %}
+{# {% cache for 3 weeks %} #}
+  {% set backgroundImage = entry.heroBackgroundImage|length == 0 ? "" : " background: url(" ~  entry.heroBackgroundImage|first.url ~ ") no-repeat #000; background-size: cover;" %}
+  <section id="hero" class="parallax" style="{{ backgroundImage }}">
+    <div class="container">
+      <div class="row middle-xs">
+        <div class="col-xs-6">
+          <h1>{{entry.heroTitle}}</h1>
+          <a href="" class="btn btn-white"><b>View Workouts</b></a>
+        </div>
+      </div>
+    </div>    
+    {# <div class="video-close hamburger hamburger--collapse is-active">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </div> #}
+    <h1>hello</h1>
+  </section>
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-5">
+          <h2><b>{{entry.aboutTitle}}</b></h2>
+          <h3>{{entry.aboutName}}</h3>
+          <img src="{{entry.aboutImage|first.url}}">
+          <div class="about-quote">
+            <p><b>{{entry.aboutQuote}}</b></p>
+            <p>{{entry.aboutQuoteFrom}}</p>
+          </div>
+        </div>
+        <div class="col-xs-7 about-body">
+        {{entry.aboutBody}}
+        </div>
+      </div>
+      <a class="btn btn-white mobile-only about-body-trigger"><b>Read More + </b></a>
+    </div>
+  </section>
+  {% set backgroundImage = entry.testimonialsBackgroundImage|length == 0 ? "" : " background: url(" ~  entry.testimonialsBackgroundImage|first.url ~ ") no-repeat #000; background-size: cover;" %}
+  <section id="testimonials" class="parallax" style="{{ backgroundImage }}">
+   <div class="slides-container">
+      <span class="arrow arrow-left desktop-tablet-only icon-icons_navigation_arrow_left"></span>
+      {% for child in entry.testimonials %}
+        {# {% set backgroundImage = slide.backgroundImage|length == 0 ? "" : " background: url(" ~  block.backgroundImage|first.url ~ ") no-repeat;   " %} #}
+        <div class="slide{% if loop.first  %} active{% endif %}" >
+          <div class="slide-container">
+            <p><b>{{ child.title }}</b></p>
+            <h4><b>{{child.text}}</b></h4>
+            <p><b>{{child.textAuthor}}</b></p>
+          </div>
+        </div>
+      {% endfor %}
+      <span class="arrow arrow-right desktop-tablet-only icon-icons_navigation_arrow_right"></span>
+    </div>
+  </section>
+  <section id="services">
+    <div class="container">
+      <h2><b>{{entry.servicesTitle}}</b></h2>
+      {{entry.servicesBody}}
+      <div class="row service-row">
+        {% for child in entry.servicesCards %}
+        <div class="col-xs-6 service-container">
+          <a class="service mobile-dropdown">
+            <h4><b>{{ child.title }}</b></h4>
+            <div class="dropdown-inner">
+              <p>{{child.body}}</p>
+              <p class="text-upper"><b>Book Now</b></p>
+            </div>
+          </a>
+        </div>
+        {% endfor %}  
+      </div>
+    </div>
+  </section>
+  <section id="instagram">
+    <div class="row">
+      <a href="{{siteInfo.instagram}}" target="_blank" class="col-xs-3 follow">
+        <img src="/src/img/instagram-back.png" alt="Follow us on Instagram">
+        <b>Follow Us on Instagram</b>
+      </a>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="row">
+        <div class="col-xs-4">
+          <h2><b>Contact</b></h2>
+          <p><span class="text-medium text-purple">LOCATION</span><br>
+          {{entry.location}}</p>
+          <p><span class="text-medium text-purple">TEL</span><br>
+          {{entry.tel}}</p>
+          <p><span class="text-medium text-purple">EMAIL</span><br>
+          {{entry.email}}</p>
+        </div>
+        <div class="col-xs-8">
+            {% include 'include/_form.twig' %} 
+        </div>
+    </div>
+  </section>
+{# {% endcache %}
+ #}
+{% endblock %}

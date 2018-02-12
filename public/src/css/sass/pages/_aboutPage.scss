@@ -1,0 +1,28 @@
+.aboutPage {
+  .slides-square {
+    padding-bottom:  100%;
+  }
+  .slides-left-bottom {
+    padding-bottom: 66%;
+    width: 66%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .triangle {
+    @include triangle-top-right(150, $gray);
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .about {
+    padding: 30px;
+    background: $gray-light;
+    &__link {
+      display: block;
+      text-align: right;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  }
+  padding-bottom: 80px;
+}

@@ -1,0 +1,33 @@
+.btn, button {
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid $gray;
+  padding: 6px 26px;
+  display: block;
+  color: $white;
+  text-decoration: none;
+  max-width: 100%;
+  text-align: center;
+  transition: all .5s ease;
+  background-color: $gray;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: $purple;    
+  }
+
+  @include mobile-only {
+    width: 100%;
+  }
+  &[type="submit"], &.btn-white {
+    font-size: 14px;
+    background-color: transparent;
+    margin-top: 15px;
+    color: $purple;
+    &:hover {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+}

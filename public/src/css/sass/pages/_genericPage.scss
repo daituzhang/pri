@@ -1,0 +1,66 @@
+.genericPage {
+  .slides-square {
+    padding-bottom:  100%;
+  }
+
+  @include desktop-tablet {
+    .slides-row {
+      margin-top: 12%;
+    }
+
+    .slides-right {
+      margin-top: -17%;
+    }
+  }
+
+  .triangle-top {
+    position: absolute;
+    left: calc(33% - 90px);
+    top: -70px;
+    @include triangle-bottom-right(100, $gray);
+  }
+  .triangle-bottom {
+    position: absolute;
+    left: 33%;
+    bottom: 5%;
+    @include triangle-top-left(150, $gray);
+  }
+
+  .slide-generic {
+    h2 {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+  .slide-special {
+    background-color: $pink;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    .slide-container {
+      align-self: center;
+    }
+    h2 {
+      margin-bottom:10px;
+      color: $white;
+    }
+  }
+
+  .slide-contact {
+    background-color: $gray-light;
+    padding: 30px;
+  }
+
+  &#contact {
+    .slides-right {
+      padding: 0;
+      .slide {
+        position: relative;
+        min-height: calc(( 100vw - 250px ) / 3 * 2);
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.servicesPage {
+  padding-top: 20px;
+  .triangle-bottom-left {
+    @include triangle-top-right(90, $gray);
+    position: absolute;
+    top: calc(( 100vw - 350px ) / 3 + 20px);
+  }
+
+  .triangle-top-right {
+    @include triangle-top-right(90, rgba($gray,.7));
+    position: absolute;
+    right: -20px;
+    top: -10px;   
+    z-index: 2;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  &.container {
+    overflow: visible;
+  }
+
+  &__service-row {
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__service {
+    @include desktop-tablet {
+      transition: all .3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width: calc(( 100% - 140px ) / 3);
+      &:nth-child(2) {
+        left: calc(( 100% - 140px ) / 3 + 70px);
+         &:hover, &.active { 
+          left: 0;
+         }
+      }
+
+      &:last-child {
+        left: calc(( 100% - 140px ) / 3 * 2 + 140px);
+        &:hover, &.active { 
+          left: 0;
+        }
+      }
+
+    }
+
+    &.active {
+      position: relative;
+    }
+
+    &:not(:hover):not(.active) {
+      .servicesPage__left {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      .servicesPage__right {
+        display: none;
+      }
+    }
+
+    &:hover, &.active {
+      width: 100%;
+      z-index: 1;
+      .servicesPage__service-container {
+      }
+    }
+
+    &:not(.active) {
+      .servicesPage__detail-container {
+        display: none;
+      }
+    }
+  }
+
+  &__service-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(( 100vw - 350px ) / 3 );
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center; 
+  }
+
+  &__description {
+    text-align: center;
+    width: 100%;
+    align-self: center;
+  }
+
+  &__detail-container {
+    background-color: $gray-light;
+    h3 {
+      padding: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__detail-body {
+    padding: 20px;
+  }
+
+
+  blockquote {
+    text-transform: uppercase;
+  }
+
+  &__detail {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .5s ease;
+    &.active {
+      position: relative;
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+
+  nav {
+    padding: 20px 20px 30px 20px;
+    text-align: right;
+    pagination, ul, li {
+      display: inline;
+    }
+    a {
+      text-decoration: none;
+      color: $gray;
+      &.active {
+        color: $purple;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,4 @@
+{% set backgroundImage = block.image|length == 0 ? "" : " background: url(" ~  block.image|first.url ~ ") no-repeat #000; background-size: 140%;" %}
+<a href="{{ block.linkAddress }}" target="_blank" class="slide-generic slide{{ loop.first ? ' active' : ''}} parallax" data-mode="slide" style="{{ backgroundImage }}">
+  <h2 style="color: {{ block.headingColor }};">{{block.heading}}</h2>
+</a>

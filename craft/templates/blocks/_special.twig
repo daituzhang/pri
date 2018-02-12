@@ -1,0 +1,7 @@
+<div class="slide-special slide{{ loop.first ? ' active' : ''}}">
+  <div class="slide-container">
+    <h2 style="color: {{block.headingColor}};">{{block.heading}}</h2>
+    {{block.body}}
+    <a class="btn" href="{{ block.buttonLink }}">{{block.buttonText}}</a>
+  </div>
+</div>
