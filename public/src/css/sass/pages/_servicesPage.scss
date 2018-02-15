@@ -4,6 +4,9 @@
     @include triangle-top-right(90, $gray);
     position: absolute;
     top: calc(( 100vw - 350px ) / 3 + 20px);
+    @media only screen and (min-width: 1264px) {
+      top: calc(( 1024px - 140px) / 3 + 20px);
+    }
   }
 
   .triangle-top-right {
@@ -95,6 +98,9 @@
   &__service-container {    
     width: 100%;
     height: calc(( 100vw - 350px ) / 3 );
+    @media only screen and (min-width: 1264px) {
+      height: calc(( 1024px - 140px) / 3);
+    }
     @include desktop-tablet {
       position: absolute;
       top: 0;

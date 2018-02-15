@@ -1075,6 +1075,10 @@ __row {
     position: absolute;
     top: -webkit-calc(( 100vw - 350px ) / 3 + 20px);
     top: calc(( 100vw - 350px ) / 3 + 20px); }
+    @media only screen and (min-width: 1264px) {
+      .servicesPage .triangle-bottom-left {
+        top: -webkit-calc(( 1024px - 140px) / 3 + 20px);
+        top: calc(( 1024px - 140px) / 3 + 20px); } }
   .servicesPage .triangle-top-right {
     width: 0;
     height: 0;
@@ -1148,6 +1152,10 @@ __row {
     width: 100%;
     height: -webkit-calc(( 100vw - 350px ) / 3);
     height: calc(( 100vw - 350px ) / 3); }
+    @media only screen and (min-width: 1264px) {
+      .servicesPage__service-container {
+        height: -webkit-calc(( 1024px - 140px) / 3);
+        height: calc(( 1024px - 140px) / 3); } }
     @media only screen and (min-width: 761px) and (min-device-width: 761px) {
       .servicesPage__service-container {
         position: absolute;
