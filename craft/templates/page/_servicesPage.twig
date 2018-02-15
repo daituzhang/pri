@@ -1,8 +1,11 @@
+{% set child = craft.request.getLastSegment() %}
+{% set entry = craft.entries.section('page').slug('services').first %}
 <div class="servicesPage__service-row">
   {% set services = ['One','Two','Three'] %}
+  {% set children = ['interiors' , 'consulting', 'appearances'] %}
   {% for service in services %}
   {% set backgroundImage = entry['service' ~ service ~ 'Image']|length == 0 ? "" : " background: url(" ~  entry['service' ~ service ~ 'Image']|first.url ~ ") no-repeat #000; background-size: cover;" %}
-    <div class="servicesPage__service" id="service-{{service}}">
+    <div class="servicesPage__service{{child == children[loop.index - 1]? ' active':''}}" id="service-{{service}}">
       <div class="row no-gap">
         <div class="servicesPage__service-container row no-gap" style="{{backgroundImage}}">
           <a class="col-xs-4 servicesPage__left trigger" data-type="toggle" data-id="service-{{service}}">

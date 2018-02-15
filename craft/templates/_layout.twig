@@ -51,23 +51,49 @@
           <ul>
             <li><a href="/about-me">About Me</a></li>
             <li><a href="/press">Press</a></li>
-            <li><a href="/services">Services</a>
-              <div class="mp-level">
+            <li class="desktop-tablet-only"><a href="/services">Services</a>
+              <div class="li-child">
                 <ul>
-                  <li><a href="">Interiors</a></li>
-                  <li><a href="">Consulting</a></li>
-                  <li><a href="">Appearences</a></li>
+                  <li><a href="/services/interiors">Interiors</a></li>
+                  <li><a href="/services/consulting">Consulting</a></li>
+                  <li><a href="/services/appearences">Appearences</a></li>
                 </ul>
               </div>
             </li>
-            <li><a href="/shop">Shop</a></li>
+            <li class="mobile-only"><a href="/services">Services</a>
+              <div class="mp-level">
+                <ul>
+                  <li><a href="/services">Services Main</a></li>
+                  <li><a href="/services/interiors">Interiors</a></li>
+                  <li><a href="/services/consulting">Consulting</a></li>
+                  <li><a href="/services/appearences">Appearences</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="desktop-tablet-only"><a href="/shop">Shop</a>
+              <div class="li-child">
+                <ul>
+                  <li><a href="/shop/melanin">Melanin Phactor</a></li>
+              </div>
+            </li>
+            <li class="mobile-only"><a href="/shop">Shop</a>
+              <div class="mp-level">
+                <ul>
+                  <li><a href="/shop">Shop Main</a></li>
+                  <li><a href="/shop/melanin">Melanin Phactor</a></li>
+              </div>
+            </li>
             <li><a href="#testimonials">Blogs</a></li>
             <li><a href="#contact">Crelove</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li class="li-icon"><a class="icon-search"></a></li>
-            <li class="li-icon"><a class="icon-shoppingbag"></a></li>
+            <li class="li-icon"><a data-id="search-form" data-type="toggle" class="icon-search trigger"></a></li>
+            <li class="li-icon"><a class="icon-shoppingbag" href="https://melaninphactor.com/cart"></a></li>
           </ul>
         </div>
+        <form id="search-form" action="{{ url('search') }}">
+            <input type="search" name="q" placeholder="Search">
+            <button class="btn" type="submit">Go</button>
+        </form>
       </nav>
 {% endcache %}
       <div class="scroller"><!-- this is for emulating position fixed of the nav -->

@@ -33,9 +33,10 @@ form {
     }
   }
   input,select,textarea {
+    font-family: 'Heebo';
     padding: 10px 20px;
     width: 100%;
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     background: $gray-light;
     border: none;
@@ -43,8 +44,9 @@ form {
     border-top: 1px solid $gray;
 
     @include placeholder {
+      font-family: 'Heebo';
       font-size: inherit;
-      font-weight: 500;
+      font-weight: 400;
       color: $gray-dark;
     }
   }

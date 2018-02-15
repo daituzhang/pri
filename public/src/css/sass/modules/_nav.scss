@@ -19,7 +19,7 @@ nav#mp-menu {
     top: 0;
     left: 0;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     h2 {
       display: none;
@@ -49,7 +49,6 @@ nav#mp-menu {
     li , a:not(.logo-link) {
       box-shadow: none;
       text-shadow: none;
-      font-size: 1.6rem;
       &:not([class^="icon-"]):before {
         content: none;
       }
@@ -59,7 +58,10 @@ nav#mp-menu {
       text-shadow: none;
       position: relative;
       vertical-align: top;
-      > .mp-level {
+      &:hover {
+        color: $purple;
+      }
+      > .li-child {
         max-height: 0;
         height: auto;
         overflow-y: hidden;
@@ -78,12 +80,15 @@ nav#mp-menu {
           color: $white;
           margin-bottom: 5px;
           a {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             padding: 5px 25px;
+          }
+          &:hover {
+            color: $purple;
           }
         }
       }
-      &:hover > .mp-level {
+      &:hover > .li-child {
         max-height: 1000px;
       }
     }
@@ -125,6 +130,26 @@ nav#mp-menu {
   display: block;
   width: 150px;
   @include center-x;
+}
+
+#search-form {
+  background: $white;
+  padding: 20px;
+  display: flex;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transform: all .5s ease;
+  &.active {
+    z-index: 12;
+    opacity: 1;
+  }
+  input {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
 }
 @include desktop-only {
   .logo {

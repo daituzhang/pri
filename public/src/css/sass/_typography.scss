@@ -23,10 +23,10 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-family: 'Heebo';
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 35px;
   text-transform: uppercase;  
   b {
@@ -40,10 +40,18 @@ h2 {
 
 h3 {
   font-family: 'Heebo';
-  font-weight: 700;  
+  font-weight: 300;  
+  margin-bottom: 10px;
   @include mobile-only {
     font-size: 20px;
   }
+}
+
+blockquote {
+  font-family: 'Heebo';
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -76,7 +84,7 @@ p {
   line-height: 1.2;
   font-weight: 300;
   font-family: 'Heebo';
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   @include mobile-only {
     line-height: 1.2;
   }

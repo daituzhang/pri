@@ -12,7 +12,9 @@
   [class^="col-"] {
     ms-flex-preferred-size:100%;
     flex-basis:100%;
-    max-width:100%
+    max-width:100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

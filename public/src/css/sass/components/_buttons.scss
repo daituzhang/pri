@@ -1,6 +1,6 @@
 .btn, button {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 300;
   border: 2px solid $gray;
   padding: 6px 26px;
   display: block;
@@ -20,7 +20,7 @@
   @include mobile-only {
     width: 100%;
   }
-  &[type="submit"], &.btn-white {
+  &.btn-white {
     font-size: 14px;
     background-color: transparent;
     margin-top: 15px;

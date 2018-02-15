@@ -8,11 +8,6 @@
 html {
   color: $purple;
   background-color: $white;
-  border-bottom: 10px solid $pink;
-  @include desktop-tablet {
-    border-left: 35px solid $pink;
-    border-right: 35px solid $pink;
-  }
 }
 
 body {
@@ -21,8 +16,13 @@ body {
 
 .scroller {
  // overflow-y: scroll;
-  @include desktop-only {
-     margin-top: 94px;
+ @include desktop-tablet {
+    border-left: 35px solid $pink;
+    border-right: 35px solid $pink;
+    border-bottom: 10px solid $pink;
+  }
+  @include desktop-tablet {
+    padding-top: 94px;
     transition: all .5s ease;
     &.nav-narrow {
       //margin-top: 64px;

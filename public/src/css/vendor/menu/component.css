@@ -6,12 +6,8 @@
     box-sizing: border-box;
 }
 
-html, body, .mp-container, .scroller {
+html, body,  .scroller {
 	height: 100%;
-}
-
-.scroller {
-	overflow-y: scroll;
 }
 
 .scroller,
@@ -216,11 +212,6 @@ html, body, .mp-container, .scroller {
 
 .mp-level > ul > li:first-child > a {
 	box-shadow: inset 0 -1px rgba(255,255,255,0.5), inset 0 1px rgba(255,255,255,0.5);
-}
-
-.mp-menu ul li a:hover,
-.mp-level > ul > li:first-child > a:hover {
-	color: #ab9faa;;
 }
 
 .mp-menu .mp-level.mp-level-overlay > ul > li > a,

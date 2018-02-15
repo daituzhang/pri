@@ -31,7 +31,12 @@
   &__left {
     display: flex;
     justify-content: center;
-    height: 100%;
+    @include desktop-tablet {
+      height: 100%;
+    }
+    @include mobile-only {
+      padding-top: 15%;
+    }
   }
 
   &__service {
@@ -87,12 +92,17 @@
     }
   }
 
-  &__service-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__service-container {    
     width: 100%;
     height: calc(( 100vw - 350px ) / 3 );
+    @include desktop-tablet {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    @include mobile-only {
+      height: 100vw;
+    }
   }
 
   &__right {
@@ -103,13 +113,16 @@
   &__description {
     text-align: center;
     width: 100%;
-    align-self: center;
+    @include desktop-tablet {
+      align-self: center;
+    }
   }
 
   &__detail-container {
     background-color: $gray-light;
+    font-size: 1.7rem;
     h3 {
-      padding: 20px;
+      padding: 2.2rem;
       text-transform: uppercase;
     }
   }
