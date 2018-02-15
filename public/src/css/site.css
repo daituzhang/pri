@@ -987,8 +987,9 @@ nav#mp-menu {
   padding: 0; }
   .genericPage#contact .slides-right .slide {
     position: relative;
-    min-height: -webkit-calc(( 100vw - 250px ) / 3 * 2);
-    min-height: calc(( 100vw - 250px ) / 3 * 2); }
+    min-height: -webkit-calc(( 100vw - 450px ) / 3 * 2);
+    min-height: calc(( 100vw - 450px ) / 3 * 2);
+    max-height: 630px; }
 
 .aboutPage {
   padding-bottom: 80px; }

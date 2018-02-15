@@ -59,7 +59,8 @@
       padding: 0;
       .slide {
         position: relative;
-        min-height: calc(( 100vw - 250px ) / 3 * 2);
+        min-height: calc(( 100vw - 450px ) / 3 * 2);
+        max-height: 630px;
       }
     }
   }
