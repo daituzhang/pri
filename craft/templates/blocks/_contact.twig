@@ -1,4 +1,8 @@
 <div class="slide-contact slide{{ loop.first ? ' active' : ''}}">
   <h2>{{block.heading}}</h2>
-  {{ craft.formBuilder.form("contactForm") }}
+  {{ craft.formBuilder.form({
+      formHandle: 'contactForm', 
+      submission: submission is defined ? submission : null
+    }) 
+  }}
 </div>
