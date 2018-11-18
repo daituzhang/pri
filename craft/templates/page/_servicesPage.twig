@@ -28,16 +28,18 @@
                 </div>
               </div>         
             {% endfor %}
-            <nav>
-              PAGES
-                <pagination>
-                  <ul>
-                  {% for block in entry['service' ~ service ~ 'Details'].blocks %}
-                    <li class="servicesPage__detail-trigger trigger" data-type="default" data-trigger="servicesPage__detail" data-id="service{{service}}Details-{{loop.index}}"><a href="#">{{loop.index}}</a></li>
-                  {% endfor %}
-                  </ul> 
-                </pagination>
-            </nav>
+            {% if entry['service' ~ service ~ 'Details'].blocks.length > 0 %}
+              <nav>
+                PAGES
+                  <pagination>
+                    <ul>
+                    {% for block in entry['service' ~ service ~ 'Details'].blocks %}
+                      <li class="servicesPage__detail-trigger trigger" data-type="default" data-trigger="servicesPage__detail" data-id="service{{service}}Details-{{loop.index}}"><a href="#">{{loop.index}}</a></li>
+                    {% endfor %}
+                    </ul> 
+                  </pagination>
+              </nav>
+            {% endif %}
           </div>
         </div>    
       </div>
