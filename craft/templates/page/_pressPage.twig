@@ -1,6 +1,6 @@
 <div class="row no-gap">
   {% for block in entry.press.blocks %}
-    <a class="col-xs-{{12 / entry.press.blocks|length}}" href="{{ block.linkAddress }}" target="_blank">
+    <a class="col-xs-3" href="{{ block.linkAddress }}" target="_blank">
       {% if block.image|length %}
         <img src="{{block.image|first.url}}" alt="{{block.image|first}}">
       {% endif %}

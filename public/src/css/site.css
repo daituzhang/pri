@@ -983,9 +983,9 @@ nav#mp-menu {
   background-color: #e8e7ec;
   padding: 30px; }
 
-.genericPage#contact .slides-right {
+.genericPage#contact .slides-right, .genericPage#about-me .slides-right {
   padding: 0; }
-  .genericPage#contact .slides-right .slide {
+  .genericPage#contact .slides-right .slide, .genericPage#about-me .slides-right .slide {
     position: relative;
     min-height: -webkit-calc(( 100vw - 450px ) / 3 * 2);
     min-height: calc(( 100vw - 450px ) / 3 * 2);
