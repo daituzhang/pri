@@ -991,31 +991,15 @@ nav#mp-menu {
     min-height: calc(( 100vw - 450px ) / 3 * 2);
     max-height: 630px; }
 
-.aboutPage {
-  padding-bottom: 80px; }
-  .aboutPage .slides-square {
-    padding-bottom: 100%; }
-  .aboutPage .slides-left-bottom {
-    padding-bottom: 66%;
-    width: 66%;
-    margin-right: 0;
-    margin-left: auto; }
-  .aboutPage .triangle {
-    width: 0;
-    height: 0;
-    border-top: 150px solid #ab9faa;
-    border-left: 150px solid transparent;
-    margin-right: 0;
-    margin-left: auto; }
-  .aboutPage .about {
-    padding: 30px;
-    background: #e8e7ec; }
-    .aboutPage .about__link {
-      display: block;
-      text-align: right;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-top: 20px; }
+.about {
+  padding: 30px;
+  background: #e8e7ec; }
+  .about__link {
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 20px; }
 
 .pressPage img {
   width: 100%;
