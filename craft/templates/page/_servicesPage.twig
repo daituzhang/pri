@@ -28,7 +28,7 @@
                 </div>
               </div>         
             {% endfor %}
-            {% if entry['service' ~ service ~ 'Details'].blocks.length > 0 %}
+            {% if entry['service' ~ service ~ 'Details'].blocks | length > 0 %}
               <nav>
                 PAGES
                   <pagination>
