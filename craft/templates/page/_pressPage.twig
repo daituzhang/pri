@@ -1,9 +1,17 @@
 <div class="row no-gap">
   {% for block in entry.press.blocks %}
+    {% if block.linkAddress != '' %}
     <a class="col-xs-3" href="{{ block.linkAddress }}" target="_blank">
       {% if block.image|length %}
         <img src="{{block.image|first.url}}" alt="{{block.image|first}}">
       {% endif %}
     </a>
+    {% else %}
+    <div class="col-xs-3">
+      {% if block.image|length %}
+        <img src="{{block.image|first.url}}" alt="{{block.image|first}}">
+      {% endif %}
+    </div>
+    {% endif %}
   {% endfor %}
 </div>

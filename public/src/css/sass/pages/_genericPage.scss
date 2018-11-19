@@ -60,8 +60,15 @@
       .slide {
         position: relative;
         min-height: calc(( 100vw - 450px ) / 3 * 2);
+      }
+    }
+  }
+  &#contact {
+    .slides-right {
+      .slide {
         max-height: 630px;
       }
     }
   }
+
 }

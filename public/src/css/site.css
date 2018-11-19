@@ -988,8 +988,10 @@ nav#mp-menu {
   .genericPage#contact .slides-right .slide, .genericPage#about-me .slides-right .slide {
     position: relative;
     min-height: -webkit-calc(( 100vw - 450px ) / 3 * 2);
-    min-height: calc(( 100vw - 450px ) / 3 * 2);
-    max-height: 630px; }
+    min-height: calc(( 100vw - 450px ) / 3 * 2); }
+
+.genericPage#contact .slides-right .slide {
+  max-height: 630px; }
 
 .about {
   padding: 30px;
