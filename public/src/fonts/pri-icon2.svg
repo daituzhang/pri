@@ -1,13 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
 <defs>
-<font id="facebook" horiz-adv-x="1000" >
-<font-face font-family="facebook" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font id="footheaven" horiz-adv-x="1000" >
+<font-face font-family="footheaven" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
-<glyph glyph-name="cancel-1" unicode="&#xe801;" d="M654 349l346-346-154-154-346 346-346-346-154 154 346 346-346 346 154 154 346-346 346 346 154-154z" horiz-adv-x="1000" />
-
 <glyph glyph-name="search" unicode="&#xe802;" d="M987-78l-301 301c56 68 85 148 85 241 0 212-173 386-385 386s-386-174-386-386 174-385 386-385c93 0 173 34 241 85l301-301c8-9 21-13 30-13s21 4 29 13c17 12 17 42 0 59z m-902 542c0 166 135 301 301 301 165 0 300-135 300-301 0-165-135-300-300-300-166 0-301 135-301 300z" horiz-adv-x="1000" />
 
 <glyph glyph-name="shoppingbag" unicode="&#xe804;" d="M840 641h-159a240 240 0 0 1-476 0h-158l-47-791h889z m-396 124a156 156 0 0 0 152-124h-305a156 156 0 0 0 153 124z m-354-830l37 622h633l37-622z" horiz-adv-x="887" />
@@ -19,10 +17,6 @@
 <glyph glyph-name="pinterest" unicode="&#xe807;" d="M416 850c-276 0-416-195-416-360 0-99 38-188 119-221 13-5 26 0 31 15 2 10 15 36 18 46 5 15 2 20-8 33-25 28-41 56-41 106 0 168 104 285 282 285 157 0 244-97 244-224 0-165-74-299-186-299-60 0-106 45-91 106 18 74 51 153 51 203 0 49-26 82-79 82-63 0-112-59-112-145 0-53 18-81 18-81s-63-274-76-323c-23-94-2-208-2-218 0-8 10-8 12-3 5 8 81 99 107 188 7 26 40 158 40 158 21-38 79-64 143-64 190 0 317 160 317 386 0 170-147 330-371 330z" horiz-adv-x="787" />
 
 <glyph glyph-name="twitter" unicode="&#xe808;" d="M1062 698c87 56 93 133 93 133-28-37-152-58-152-58-105 127-266 58-266 58-189-68-161-284-161-284-325 6-502 257-502 257-99-205 68-329 68-329-37-3-102 25-102 25-3-189 192-254 192-254-18-3-102-3-102-3 43-155 226-170 226-170-179-133-356-108-356-108 173-137 347-121 468-106 291 40 445 254 445 254 205 266 137 489 171 502 0 0 0 0 3 0 34 15 111 114 111 114-59-31-136-31-136-31z" horiz-adv-x="1195" />
-
-<glyph glyph-name="menu" unicode="&#xf0c9;" d="M857 100v-71q0-15-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 25t25 11h785q15 0 26-11t10-25z m0 286v-72q0-14-10-25t-26-10h-785q-15 0-25 10t-11 25v72q0 14 11 25t25 10h785q15 0 26-10t10-25z m0 285v-71q0-14-10-25t-26-11h-785q-15 0-25 11t-11 25v71q0 15 11 26t25 10h785q15 0 26-10t10-26z" horiz-adv-x="857.1" />
-
-<glyph glyph-name="linkedin" unicode="&#xf318;" d="M204 698q0-40-29-68t-75-28q-44 0-72 28t-28 68q0 42 28 69t74 27 73-27 29-69z m-198-790l0 618 192 0 0-618-192 0z m306 420q0 86-4 198l166 0 10-86 4 0q60 100 190 100 100 0 161-67t61-199l0-366-192 0 0 342q0 134-98 134-70 0-98-72-6-12-6-48l0-356-194 0 0 420z" horiz-adv-x="900" />
 </font>
 </defs>
 </svg>

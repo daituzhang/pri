@@ -1,6 +1,6 @@
 nav#mp-menu {
   z-index: 11;
-  color: $gray;
+  color: $purple;
   background-color: $white;
   a {
     text-decoration: none;
@@ -59,7 +59,7 @@ nav#mp-menu {
       position: relative;
       vertical-align: top;
       &:hover {
-        color: $purple;
+        color: $gray;
       }
       > .li-child {
         max-height: 0;
@@ -84,7 +84,7 @@ nav#mp-menu {
             padding: 5px 25px;
           }
           &:hover {
-            color: $purple;
+            color: $gray;
           }
         }
       }
@@ -155,7 +155,8 @@ nav#mp-menu {
   .logo {
     width: 20%;
     img {
-      max-width: 153px;
+      max-width: 182px;
+      margin-top: -13px;
     }
   }
   .mp-pusher {
