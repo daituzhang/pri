@@ -153,9 +153,9 @@ nav#mp-menu {
 }
 @include desktop-only {
   .logo {
-    width: 20%;
+    width: 200px;
     img {
-      max-width: 182px;
+      max-width: 200px;
       margin-top: -13px;
     }
   }
